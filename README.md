@@ -18,9 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-Refer to the [Saas Runner API docs](http://docs.saasrunner.apiary.io/) for more information on the API.
+Refer to the [SaaS Runner API docs](http://docs.saasrunner.apiary.io/) for more information on the API.
 
-First create a new client object with your Saas Runner API key
+First create a new client object with your SaaS Runner API key
 
 ```ruby
 client = SaasRunner::Client.new(api_key: 'YOUR API KEY')
