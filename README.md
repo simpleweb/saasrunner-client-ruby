@@ -1,6 +1,6 @@
 # SaasRunner
 
-Ruby cliebt library for the Saas Runner REST API
+Ruby client library for the SaaS Runner REST API
 
 ## Installation
 
@@ -38,16 +38,16 @@ client.subscribers.create!(subscriber_uid: 'ABC123')
 
 ### Transactions
 
-Create a new transaction charge
+Create a new transaction charge using the three digit letter code for the currency (eg USD or GBP)
 
 ```ruby
-client.transactions.charge!(subscriber_uid: 'ABC123', amount_in_cents: 1000)
+client.transactions.charge!(subscriber_uid: 'ABC123', transaction_uid: '123', amount_in_cents: 1000, currency: 'USD')
 ```
 
 Create a new transaction refund
 
 ```ruby
-client.transactions.refund!(subscriber_uid: 'ABC123', amount_in_cents: 150)
+client.transactions.refund!(subscriber_uid: 'ABC123', transaction_uid: '124', amount_in_cents: 150, currecny: 'USD')
 ```
 
 ### Events

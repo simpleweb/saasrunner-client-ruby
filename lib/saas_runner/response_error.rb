@@ -23,7 +23,7 @@ module SaasRunner
     end
 
     def errors
-      return body if body.kind_of?(String)
+      return body.to_s 
 
       messages = []
 
