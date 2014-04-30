@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SaasRunner::Client do
-  
+
   let(:client) { SaasRunner::Client.new(api_key: "00b4040a-ed54-4524-a33e-f992298383cc") }
   let(:subscriber_uid) { "sub#{Time.now.to_i}" }
   let(:transaction_uid) { "#{Time.now.to_i}" }
@@ -46,7 +46,7 @@ describe SaasRunner::Client do
     end
     it "should delete a requested event" do
       event = client.subscribers.create!(subscriber_uid: "event#{Time.now.to_i + 1}")
-      resource.destroy!(event.id)
+      resource.destroy!(event.subscriber.id)
       expect(resource.response.status).to eq(204)
     end
   end
