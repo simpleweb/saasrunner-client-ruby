@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe SaasRunner::Client do
-
+describe SaasRunner::Client, :vcr do
   let(:client) { SaasRunner::Client.new(api_key: "00b4040a-ed54-4524-a33e-f992298383cc") }
   let(:subscriber_uid) { "sub#{Time.now.to_i}" }
   let(:transaction_uid) { "#{Time.now.to_i}" }

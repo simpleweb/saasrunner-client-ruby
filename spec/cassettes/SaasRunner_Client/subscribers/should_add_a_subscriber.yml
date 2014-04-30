@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.saasrunner.com/subscribers
+    body:
+      encoding: US-ASCII
+      string: subscriber%5Bsubscriber_uid%5D=sub1398853222
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-API-Key:
+      - 00b4040a-ed54-4524-a33e-f992298383cc
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - nginx/1.4.4
+      date:
+      - Wed, 30 Apr 2014 10:20:18 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      etag:
+      - '"4ae4e39e2a9ce0e906cd85f2b6d0a61f"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - a11e57fe-c778-447e-8bba-6898719ee698
+      x-runtime:
+      - '0.009839'
+    body:
+      encoding: UTF-8
+      string: '{"subscriber":{"id":8356,"subscriber_uid":"sub1398853222","dated_at":"2014-04-30","meta":null,"errors":[]}}'
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 10:20:22 GMT
+recorded_with: VCR 2.9.0

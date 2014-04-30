@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.saasrunner.com/transactions/charge
+    body:
+      encoding: US-ASCII
+      string: transaction%5Bsubscriber_uid%5D=sub1398853218&transaction%5Bamount_in_cents%5D=1000&transaction%5Bcurrency%5D=USD&transaction%5Btransaction_uid%5D=1398853219
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-API-Key:
+      - 00b4040a-ed54-4524-a33e-f992298383cc
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - nginx/1.4.4
+      date:
+      - Wed, 30 Apr 2014 10:20:15 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      etag:
+      - '"820441ed9b259088d304102b49efaa93"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 5ebff437-c930-4b01-a5e2-e8a4e695e248
+      x-runtime:
+      - '0.010185'
+    body:
+      encoding: UTF-8
+      string: '{"transaction":{"id":8355,"subscriber_uid":"sub1398853218","dated_at":"2014-04-30","meta":null,"errors":[],"transaction_uid":"1398853219","amount_in_cents":1000,"currency":"USD"}}'
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 10:20:18 GMT
+recorded_with: VCR 2.9.0

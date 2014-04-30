@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.saasrunner.com/subscribers
+    body:
+      encoding: US-ASCII
+      string: subscriber%5Bsubscriber_uid%5D=event1398853233
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-API-Key:
+      - 00b4040a-ed54-4524-a33e-f992298383cc
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - nginx/1.4.4
+      date:
+      - Wed, 30 Apr 2014 10:20:29 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      etag:
+      - '"47a051d692e510274feebfbdba8f55fb"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - fc783b9c-77e9-41df-827b-14b1eb93f7fc
+      x-runtime:
+      - '0.010767'
+    body:
+      encoding: UTF-8
+      string: '{"subscriber":{"id":8358,"subscriber_uid":"event1398853233","dated_at":"2014-04-30","meta":null,"errors":[]}}'
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 10:20:32 GMT
+- request:
+    method: delete
+    uri: http://api.saasrunner.com/events/8358
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-API-Key:
+      - 00b4040a-ed54-4524-a33e-f992298383cc
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      server:
+      - nginx/1.4.4
+      date:
+      - Wed, 30 Apr 2014 10:20:29 GMT
+      connection:
+      - close
+      status:
+      - 204 No Content
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 4932e925-e386-4593-a85f-69fb0316cdc7
+      x-runtime:
+      - '0.006371'
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Wed, 30 Apr 2014 10:20:32 GMT
+recorded_with: VCR 2.9.0
