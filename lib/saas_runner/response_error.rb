@@ -14,29 +14,17 @@ module SaasRunner
     end
 
     def to_s
-      msg = "#{status} #{method} #{url}"
-
-      errors.map(&:to_s).join(', ') if errors.kind_of?(Array)
-      msg = "#{msg} | Errors: #{errors.to_s}"
-
-      msg
+      "#{status} #{method} #{url} | Errors: #{errors}"
     end
 
+    private
+
     def errors
-      return body.to_s 
+      return body if body.kind_of?(String) 
 
       messages = []
 
-      # Convert hash to array and fetch first (and only) pair of elements
-      parts = body.to_a[0]
-
-      # Fetch key and resource
-      key, resource = parts
-
-      # Fetch errors
-      errors = resource.errors
-
-      errors.each do |error|
+      body.each do |error|
         messages.push "#{error.field} #{error.message}"
       end
 
