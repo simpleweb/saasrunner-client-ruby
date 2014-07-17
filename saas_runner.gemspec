@@ -6,8 +6,8 @@ require 'saas_runner/version'
 Gem::Specification.new do |spec|
   spec.name          = "saasrunner"
   spec.version       = SaasRunner::VERSION
-  spec.authors       = ["Paul Springett"]
-  spec.email         = ["paul@simpleweb.co.uk"]
+  spec.authors       = ["Paul Springett", "Peter Rhoades"]
+  spec.email         = ["paul@simpleweb.co.uk", "pete@simpleweb.co.uk"]
   spec.description   = %q{Ruby client library for the Saas Runner REST API}
   spec.summary       = %q{Ruby client library for the Saas Runner REST API}
   spec.homepage      = "https://github.com/simpleweb/saasrunner-client-ruby"

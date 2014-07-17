@@ -18,6 +18,10 @@ module SaasRunner
       @transactions ||= Resource::Transaction.new(self)
     end
 
+    def activations
+      @activations ||= Resource::Activation.new(self)
+    end
+
     def events
       @events ||= Resource::Event.new(self)
     end

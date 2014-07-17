@@ -52,6 +52,12 @@ Create a new transaction refund
 client.transactions.refund!(subscriber_uid: 'ABC123', transaction_uid: '124', amount_in_cents: 150, currecny: 'USD')
 ```
 
+### Activations
+
+```ruby
+client.activations.create!(subscriber_uid: 'ABC123')
+```
+
 ### Events
 
 List all events
