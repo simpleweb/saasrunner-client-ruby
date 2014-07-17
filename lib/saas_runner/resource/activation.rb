@@ -1,15 +1,15 @@
 module SaasRunner
   module Resource
     class Activation
-      attr_reader :client
+      attr_reader :client, :response
 
       def initialize(client)
         @client = client
       end
 
       def create!(params = {})
-        response = client.post('/activations', { activation: params })
-        response.body
+        @response = client.post('/activations', { activation: params })
+        @response.body
       end
     end
   end
