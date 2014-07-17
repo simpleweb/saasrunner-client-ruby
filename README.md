@@ -1,5 +1,7 @@
 # SaasRunner
 
+[![Build Status](https://travis-ci.org/simpleweb/saasrunner-client-ruby.svg?branch=master)](https://travis-ci.org/simpleweb/saasrunner-client-ruby)
+
 Ruby client library for the SaaS Runner REST API
 
 ## Installation
