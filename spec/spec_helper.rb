@@ -1,4 +1,5 @@
 require 'vcr'
+require 'saas_runner'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
@@ -7,8 +8,18 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 end
 
-require 'saas_runner'
-
 RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
+  config.order = :random
+  Kernel.srand config.seed
+
+  config.expect_with :rspec do |expectations|
+    expectations.syntax = :expect
+  end
+
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = :expect
+    mocks.verify_partial_doubles = true
+  end
 end
