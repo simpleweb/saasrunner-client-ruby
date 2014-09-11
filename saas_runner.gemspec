@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'saas_runner/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "saasrunner"
+  spec.name          = "saas_runner"
   spec.version       = SaasRunner::VERSION
   spec.authors       = ["Paul Springett", "Peter Rhoades"]
   spec.email         = ["paul@simpleweb.co.uk", "pete@simpleweb.co.uk"]
